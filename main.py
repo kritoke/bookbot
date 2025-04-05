@@ -1,3 +1,5 @@
+from stats import count_words
+
 def main():
     book_path = 'books/frankenstein.txt'
     file_contents = read_text(book_path)
@@ -12,9 +14,6 @@ def main():
 def read_text(file_loc):
     with open(file_loc) as f:
         return f.read()
-
-def count_words(text):
-    return len(text.split())
 
 def count_chars(text):
     lowered_string = text.lower()
